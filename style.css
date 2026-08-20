@@ -1,9 +1,7 @@
 :root {
   --text: #222;
   --muted: #555;
-  --line: #ccc;
   --link: #2a6bb0;
-  --bg: #fff;
 }
 
 * { box-sizing: border-box; }
@@ -11,7 +9,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: var(--bg);
+  background: #fff;
   color: var(--text);
   font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
@@ -19,14 +17,14 @@ html, body {
 }
 
 .page {
-  max-width: 900px;
+  width: min(1120px, calc(100% - 48px));
   margin: 0 auto;
-  padding: 36px 28px 64px;
+  padding: 36px 0 72px;
 }
 
 .hero {
   display: flex;
-  gap: 28px;
+  gap: 32px;
   align-items: center;
   justify-content: space-between;
 }
@@ -85,9 +83,7 @@ section p { margin: 0 0 10px; }
   padding: 0;
 }
 
-.news li {
-  padding: 3px 0;
-}
+.news li { padding: 3px 0; }
 
 .when {
   font-weight: 600;
@@ -95,55 +91,56 @@ section p { margin: 0 0 10px; }
 }
 
 .pub {
-  display: grid;
-  grid-template-columns: 176px 1fr;
-  gap: 16px;
+  display: flex;
   align-items: center;
+  gap: 20px;
   background: #f4f6f8;
-  border-radius: 12px;
+  border-radius: 10px;
   padding: 12px 14px;
   margin: 12px 0 0;
 }
 
 .pub-fig {
-  width: 176px;
-  height: 92px;
+  width: 180px !important;
+  height: 100px !important;
+  max-width: 180px;
   object-fit: contain;
   background: #fff;
-  border-radius: 8px;
+  border-radius: 6px;
+  flex-shrink: 0;
 }
 
-.pub-copy { min-width: 0; }
+.pub-copy { flex: 1; min-width: 0; }
 
 .pub h3 {
-  font-size: 1.02rem;
+  font-size: 15px;
   font-weight: 700;
   margin: 0 0 4px;
   line-height: 1.35;
-  color: #1a1a1a;
+  color: #2c3e50;
 }
 
 .authors {
   margin: 0 0 3px;
   color: var(--link);
-  font-size: 0.95rem;
+  font-size: 14px;
 }
 
-.authors b {
-  color: #0f4c8a;
-}
+.authors b { color: #1a1a1a; }
 
 .venue {
   margin: 0 0 4px;
   color: var(--muted);
   font-style: italic;
-  font-size: 0.95rem;
+  font-size: 14px;
 }
 
 .actions {
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 14px;
 }
+
+.actions a { color: #3498db; }
 
 footer {
   margin-top: 40px;
@@ -151,10 +148,9 @@ footer {
   font-size: 0.92rem;
 }
 
-@media (max-width: 640px) {
-  .page { padding: 24px 16px 48px; }
-  .hero { flex-direction: column-reverse; align-items: flex-start; gap: 16px; }
-  .avatar { width: 120px; height: 120px; }
-  .pub { grid-template-columns: 1fr; }
-  .pub-fig { width: 100%; height: auto; max-height: 180px; }
+@media (max-width: 720px) {
+  .page { width: calc(100% - 32px); }
+  .hero { flex-direction: column-reverse; align-items: flex-start; }
+  .pub { flex-direction: column; align-items: flex-start; }
+  .pub-fig { width: 100% !important; max-width: 100%; height: auto !important; }
 }
