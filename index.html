@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dayu Li</title>
   <meta name="description" content="Dayu Li is a Ph.D. student at Westlake University. Research on image restoration and embodied intelligence." />
-  <link rel="stylesheet" href="style.css?v=5" />
+  <link rel="stylesheet" href="style.css?v=6" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <style>
     html, body {
@@ -53,8 +53,19 @@
     }
     section p { margin: 0 0 10px; }
     .news { list-style: none; margin: 0; padding: 0; }
-    .news li { padding: 3px 0; }
-    .when { font-weight: 600; margin-right: 4px; }
+    .news li {
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      gap: 12px;
+      padding: 7px 0;
+      border-bottom: 1px dashed #e4eaf0;
+    }
+    .news li:last-child { border-bottom: none; }
+    .when {
+      color: #1482a5;
+      font-weight: 700;
+      font-size: 0.92rem;
+    }
     .pub {
       display: flex;
       align-items: center;
@@ -90,6 +101,7 @@
     @media (max-width: 720px) {
       .page { width: calc(100% - 32px); }
       .hero { flex-direction: column-reverse; align-items: flex-start; }
+      .news li { grid-template-columns: 1fr; gap: 2px; }
       .pub { flex-direction: column; align-items: flex-start; }
       .pub-fig { width: 100% !important; max-width: 100%; height: auto !important; }
     }
@@ -135,12 +147,12 @@
     <section>
       <h2>News</h2>
       <ul class="news">
-        <li><span class="when">[Sep, 2026]</span> Started my Ph.D. at Westlake University.</li>
-        <li><span class="when">[Jun, 2026]</span> <a href="#ssr">SSR</a> is accepted by ECCV 2026.</li>
-        <li><span class="when">[2026]</span> Completed an internship on embodied AI at Haocun Technology.</li>
-        <li><span class="when">[Jun, 2025]</span> <a href="#hint">HINT</a> is accepted by ICCV 2025.</li>
-        <li><span class="when">[2025]</span> Won 3rd place in the ICCV 2025 MIPI Workshop image restoration challenge.</li>
-        <li><span class="when">[2025]</span> Mitacs Globalink research intern at ÉTS Montréal.</li>
+        <li><span class="when">2026</span><span>Started my Ph.D. at <strong>Westlake University</strong>.</span></li>
+        <li><span class="when">2026</span><span>One paper accepted to <strong>ECCV 2026</strong>.</span></li>
+        <li><span class="when">2026</span><span>Completed an internship on embodied AI at Haocun Technology.</span></li>
+        <li><span class="when">2025</span><span>One paper accepted to <strong>ICCV 2025</strong>.</span></li>
+        <li><span class="when">2025</span><span>3rd place, ICCV 2025 MIPI Workshop image restoration challenge.</span></li>
+        <li><span class="when">2025</span><span>Mitacs Globalink research intern at ÉTS Montréal.</span></li>
       </ul>
     </section>
 
