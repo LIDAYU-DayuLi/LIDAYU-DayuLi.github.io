@@ -140,11 +140,12 @@ section p { margin: 0 0 12px; }
 .pub-copy { min-width: 0; }
 
 .pub-fig {
+  display: block;
   width: 100%;
   height: auto;
-  max-height: 210px;
   object-fit: contain;
-  background: #f4f7fa;
+  background: #fff;
+  border: 1px solid var(--line);
   border-radius: 8px;
 }
 
