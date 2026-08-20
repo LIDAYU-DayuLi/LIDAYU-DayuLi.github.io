@@ -21,7 +21,7 @@ html, body {
 }
 
 .page {
-  max-width: 760px;
+  max-width: 920px;
   margin: 0 auto;
   padding: 56px 24px 72px;
 }
@@ -126,11 +126,26 @@ section p { margin: 0 0 12px; }
 }
 
 .pub {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 18px;
+  align-items: center;
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 10px;
-  padding: 16px 18px 14px;
+  padding: 16px 16px 16px 18px;
   margin: 12px 0 0;
+}
+
+.pub-copy { min-width: 0; }
+
+.pub-fig {
+  width: 100%;
+  height: auto;
+  max-height: 210px;
+  object-fit: contain;
+  background: #f4f7fa;
+  border-radius: 8px;
 }
 
 .venue {
@@ -201,4 +216,6 @@ footer a {
   .avatar { width: 120px; height: 120px; }
   h1 { font-size: 1.8rem; }
   .news li { grid-template-columns: 1fr; gap: 2px; }
+  .pub { grid-template-columns: 1fr; }
+  .pub-fig { max-height: 240px; }
 }
