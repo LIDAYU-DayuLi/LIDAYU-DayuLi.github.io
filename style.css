@@ -96,7 +96,7 @@ section p { margin: 0 0 10px; }
 
 .pub {
   display: grid;
-  grid-template-columns: 168px 1fr;
+  grid-template-columns: 176px 1fr;
   gap: 16px;
   align-items: center;
   background: #f4f6f8;
@@ -106,8 +106,8 @@ section p { margin: 0 0 10px; }
 }
 
 .pub-fig {
-  width: 168px;
-  height: 132px;
+  width: 176px;
+  height: 92px;
   object-fit: contain;
   background: #fff;
   border-radius: 8px;
